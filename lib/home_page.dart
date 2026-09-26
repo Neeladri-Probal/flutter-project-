@@ -6,13 +6,19 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text("HomePage"),
         backgroundColor: Colors.greenAccent,
+        leading: Icon(Icons.home),
+        foregroundColor: Colors.white,
+        actions: [
+          IconButton(onPressed: () {}, icon: Icon(Icons.search)),
+          IconButton(onPressed: () {}, icon: Icon(Icons.person)),
+        ],
       ),
       body: Text(
-        "Hello",
+        "Hello, Welcome to our project",
         style: GoogleFonts.lobster(
           textStyle: TextStyle(
             fontSize: 20,
@@ -20,6 +26,15 @@ class HomePage extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Colors.greenAccent,
+        foregroundColor: Colors.white,
+        hoverColor: Colors.green,
+        shape: BeveledRectangleBorder(),
+        tooltip: "Add",
+        child: Icon(Icons.add),
       ),
     );
   }
