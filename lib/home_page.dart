@@ -10,12 +10,50 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("HomePage"),
         backgroundColor: Colors.greenAccent,
-        leading: Icon(Icons.home),
+        // leading: Icon(Icons.home),
         foregroundColor: Colors.white,
         actions: [
           IconButton(onPressed: () {}, icon: Icon(Icons.search)),
           IconButton(onPressed: () {}, icon: Icon(Icons.person)),
         ],
+      ),
+      drawer: Drawer(
+        child: Column(
+          children: [
+            UserAccountsDrawerHeader(
+              decoration: BoxDecoration(color: Colors.teal),
+              accountName: Text("Name"),
+              accountEmail: Text("Email"),
+              currentAccountPicture: Icon(Icons.person),
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text("HomePage"),
+              onTap: () {},
+              hoverColor: Colors.deepOrangeAccent,
+            ),
+            Divider(),
+            ListTile(
+              leading: Icon(Icons.contact_page),
+              title: Text("Contact"),
+              onTap: () {},
+              hoverColor: Colors.deepOrangeAccent,
+            ),
+            Divider(),
+            ListTile(
+              leading: Icon(Icons.person),
+              title: Text("Profile"),
+              onTap: () {},
+              hoverColor: Colors.deepOrangeAccent,
+            ),
+            Divider(),
+            Spacer(),
+            ListTile(
+              leading: IconButton(onPressed: () {}, icon: Icon(Icons.person)),
+              trailing: IconButton(onPressed: () {}, icon: Icon(Icons.logout)),
+            ),
+          ],
+        ),
       ),
       body: Text(
         "Hello, Welcome to our project",
