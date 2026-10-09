@@ -55,21 +55,45 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: Text(
-        "Hello, Welcome to our project",
-        style: GoogleFonts.lobster(
-          textStyle: TextStyle(
-            fontSize: 20,
-            color: Colors.amberAccent,
-            fontWeight: FontWeight.bold,
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: TextButton(
+              onPressed: () {},
+              style: TextButton.styleFrom(
+                backgroundColor: Colors.greenAccent,
+                foregroundColor: Colors.white,
+                side: BorderSide(color: Colors.pinkAccent),
+                fixedSize: Size(100, 30),
+                elevation: 5,
+                shadowColor: Colors.amber,
+              ),
+              child: Text("Text Button"),
+            ),
           ),
-        ),
+          ElevatedButton(
+            onPressed: () {},
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.greenAccent,
+              foregroundColor: Colors.white,
+              side: BorderSide(color: Colors.pinkAccent),
+              fixedSize: Size(150, 30),
+            ),
+            child: Text("Elevated Button"),
+          ),
+          OutlinedButton(onPressed: () {}, child: Text("Outlined Button")),
+          IconButton(onPressed: () {}, icon: Icon(Icons.login)),
+        ],
       ),
+
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: Colors.greenAccent,
         foregroundColor: Colors.white,
-        hoverColor: Colors.green,
+        hoverColor: const Color.fromARGB(255, 107, 175, 109),
         shape: BeveledRectangleBorder(),
         tooltip: "Add",
         child: Icon(Icons.add),
